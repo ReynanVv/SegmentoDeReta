@@ -5,7 +5,9 @@ def plot_segmento(ponto_inicial, ponto_final):
     x1, y1 = ponto_inicial
     x2, y2 = ponto_final
 
-    if y1 == y2:
+    if x1 == x2 and y1 == y2:
+        st.write("O segmento é composto por apenas um ponto.")
+    elif y1 == y2:
         st.write("O segmento é paralelo ao eixo das abcissas.")
     elif x1 == x2:
         st.write("O segmento é paralelo ao eixo das ordenadas.")
@@ -27,8 +29,12 @@ def plot_segmento(ponto_inicial, ponto_final):
 
 st.title("Plotar Segmento de Reta")
 
+st.subheader("Ponto Inicial")
 x1 = st.number_input("Coordenada x do ponto inicial", value=0)
 y1 = st.number_input("Coordenada y do ponto inicial", value=0)
+
+# Subtítulo para o ponto final
+st.subheader("Ponto Final")
 x2 = st.number_input("Coordenada x do ponto final", value=0)
 y2 = st.number_input("Coordenada y do ponto final", value=0)
 
