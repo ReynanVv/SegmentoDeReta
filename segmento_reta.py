@@ -6,7 +6,7 @@ def plot_segmento(ponto_inicial, ponto_final):
     x2, y2 = ponto_final
 
     if x1 == x2 and y1 == y2:
-        st.write("O segmento é composto por apenas um ponto.")
+        st.write("O segmento de reta é inválido, pois os dois pontos são iguais.")
     elif y1 == y2:
         st.write("O segmento é paralelo ao eixo das abcissas.")
     elif x1 == x2:
